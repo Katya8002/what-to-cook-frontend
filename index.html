@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Що приготувати?</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Що приготувати?</h1>
+      <p>Каталог рецептів</p>
+    </header>
+
+    <main class="main">
+      <form class="search" id="search-form">
+        <input
+          type="text"
+          id="search-input"
+          class="search__input"
+          placeholder="Пошук за назвою"
+          aria-label="Пошук за назвою"
+        />
+        <button type="submit" class="search__button">Знайти</button>
+      </form>
+
+      <p class="message" id="message"></p>
+      <ul class="recipes" id="recipes"></ul>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
