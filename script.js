@@ -1,5 +1,3 @@
-const API_URL = "http://127.0.0.1:8000/api/v1";
-
 const form = document.getElementById("search-form");
 const searchInput = document.getElementById("search-input");
 const message = document.getElementById("message");
@@ -22,24 +20,31 @@ function renderRecipes(recipes) {
     name.className = "recipe__name";
     name.textContent = recipe.name;
 
-    const info = document.createElement("p");
-    info.className = "recipe__info";
-    info.textContent =
-      recipe.category.name + " · " + recipe.cooking_time_min + " хв";
+    const meta = document.createElement("div");
+    meta.className = "recipe__meta";
 
-    item.append(name, info);
+    const category = document.createElement("span");
+    category.className = "magnet";
+    category.textContent = recipe.category.name;
+
+    const time = document.createElement("span");
+    time.className = "recipe__time";
+    time.textContent = recipe.cooking_time_min + " хв";
+
+    meta.append(category, time);
+    item.append(name, meta);
     recipesList.appendChild(item);
   });
 }
 
 async function loadRecipes(search) {
-  let url = API_URL + "/recipes";
+  let url = "/recipes";
   if (search) {
     url += "?search=" + encodeURIComponent(search);
   }
 
   try {
-    const response = await fetch(url);
+    const response = await apiFetch(url);
     const data = await response.json();
 
     if (!response.ok) {
