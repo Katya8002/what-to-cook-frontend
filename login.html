@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вхід</title>
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="header__brand">Що приготувати?</a>
+      <nav class="header__nav" id="nav"></nav>
+    </header>
+
+    <main class="main main--narrow">
+      <form class="form" id="login-form">
+        <h1>Вхід</h1>
+
+        <label class="field">
+          <span>Ім'я користувача</span>
+          <input type="text" id="username" autocomplete="username" required />
+        </label>
+
+        <label class="field">
+          <span>Пароль</span>
+          <input
+            type="password"
+            id="password"
+            autocomplete="current-password"
+            required
+          />
+        </label>
+
+        <p class="message" id="message"></p>
+        <button type="submit" class="button button--wide">Увійти</button>
+        <p class="form__hint">
+          Немає акаунта? <a href="register.html">Зареєструватися</a>
+        </p>
+      </form>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>

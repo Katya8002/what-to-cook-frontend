@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Реєстрація</title>
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="header__brand">Що приготувати?</a>
+      <nav class="header__nav" id="nav"></nav>
+    </header>
+
+    <main class="main main--narrow">
+      <form class="form" id="register-form" novalidate>
+        <h1>Реєстрація</h1>
+
+        <label class="field">
+          <span>Ім'я користувача</span>
+          <input type="text" id="username" autocomplete="username" />
+          <p class="field__error" data-error="username"></p>
+        </label>
+
+        <label class="field">
+          <span>Ім'я (необов'язково)</span>
+          <input type="text" id="first_name" autocomplete="given-name" />
+          <p class="field__error" data-error="first_name"></p>
+        </label>
+
+        <label class="field">
+          <span>Прізвище (необов'язково)</span>
+          <input type="text" id="last_name" autocomplete="family-name" />
+          <p class="field__error" data-error="last_name"></p>
+        </label>
+
+        <label class="field">
+          <span>Пошта</span>
+          <input type="email" id="email" autocomplete="email" />
+          <p class="field__error" data-error="email"></p>
+        </label>
+
+        <label class="field">
+          <span>Пароль</span>
+          <input type="password" id="password" autocomplete="new-password" />
+          <p class="field__error" data-error="password"></p>
+        </label>
+
+        <label class="field">
+          <span>Повторіть пароль</span>
+          <input
+            type="password"
+            id="password_confirm"
+            autocomplete="new-password"
+          />
+          <p class="field__error" data-error="password_confirm"></p>
+        </label>
+
+        <p class="message" id="message"></p>
+        <button type="submit" class="button button--wide">
+          Зареєструватися
+        </button>
+        <p class="form__hint">
+          Вже є акаунт? <a href="login.html">Увійти</a>
+        </p>
+      </form>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="register.js"></script>
+  </body>
+</html>

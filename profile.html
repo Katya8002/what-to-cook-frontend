@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Профіль</title>
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="header__brand">Що приготувати?</a>
+      <nav class="header__nav" id="nav"></nav>
+    </header>
+
+    <main class="main main--narrow">
+      <section class="form" id="profile" hidden>
+        <h1>Мій профіль</h1>
+        <dl class="profile">
+          <dt>Ім'я користувача</dt>
+          <dd id="profile-username"></dd>
+          <dt>Ім'я</dt>
+          <dd id="profile-first-name"></dd>
+          <dt>Прізвище</dt>
+          <dd id="profile-last-name"></dd>
+          <dt>Пошта</dt>
+          <dd id="profile-email"></dd>
+          <dt>Роль</dt>
+          <dd id="profile-role"></dd>
+        </dl>
+      </section>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="profile.js"></script>
+  </body>
+</html>

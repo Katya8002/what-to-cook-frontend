@@ -5,15 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Що приготувати?</title>
     <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="header">
-      <h1>Що приготувати?</h1>
-      <p>Каталог рецептів</p>
+      <a href="index.html" class="header__brand">Що приготувати?</a>
+      <nav class="header__nav" id="nav"></nav>
     </header>
 
-    <main class="main">
+    <main class="main door">
+      <section class="intro">
+        <h1>Що приготуємо сьогодні?</h1>
+        <p>Знайдіть рецепт за назвою.</p>
+      </section>
       <form class="search" id="search-form">
         <input
           type="text"
@@ -22,13 +32,14 @@
           placeholder="Пошук за назвою"
           aria-label="Пошук за назвою"
         />
-        <button type="submit" class="search__button">Знайти</button>
+        <button type="submit" class="button">Знайти</button>
       </form>
 
       <p class="message" id="message"></p>
       <ul class="recipes" id="recipes"></ul>
     </main>
 
+    <script src="auth.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
